@@ -1,6 +1,6 @@
 # Patch API changes (Cataclysm Classic)
 
-Summaries and links for Cata Classic patches relevant to addon authors. This project targets **4.4.3** / interface **40403**.
+Summaries and links for Cata Classic patches relevant to addon authors. This project targets **4.4.2** / interface **40402**.
 
 ## Per-patch wiki pages
 
@@ -8,8 +8,8 @@ Summaries and links for Cata Classic patches relevant to addon authors. This pro
 |-------|-----------|------|
 | 4.4.0 | 40400 | [Patch 4.4.0/API changes](https://warcraft.wiki.gg/wiki/Patch_4.4.0/API_changes) |
 | 4.4.1 | 40401 | [Patch 4.4.1/API changes](https://warcraft.wiki.gg/wiki/Patch_4.4.1/API_changes) |
-| 4.4.2 | 40402 | [Patch 4.4.2/API changes](https://warcraft.wiki.gg/wiki/Patch_4.4.2/API_changes) |
-| 4.4.3 | 40403 | Wiki page may not exist yet — use live KethoDoc dump + git diffs |
+| 4.4.2 | **40402** | [Patch 4.4.2/API changes](https://warcraft.wiki.gg/wiki/Patch_4.4.2/API_changes) — **this project** |
+| 4.4.3 | 40403 | Future — use live KethoDoc dump + git diffs when released |
 
 ## Notable changes
 

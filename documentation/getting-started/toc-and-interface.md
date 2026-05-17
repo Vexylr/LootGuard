@@ -8,10 +8,10 @@ The `.toc` file is plain text:
 - Other non-comment lines are **files to load** (relative to the addon folder).
 - Lines starting with `#` are comments.
 
-Example for Cataclysm Classic (4.4.3):
+Example for Cataclysm Classic (4.4.2):
 
 ```toc
-## Interface: 40403
+## Interface: 40402
 ## Title: My Addon
 ## Notes: Short description
 ## Author: YourName
@@ -31,8 +31,8 @@ MyAddon.lua
 |-------|--------------------------|
 | 4.4.0 | 40400 |
 | 4.4.1 | 40401 |
-| 4.4.2 | 40402 |
-| 4.4.3 | **40403** (this project) |
+| 4.4.2 | **40402** (this project) |
+| 4.4.3 | 40403 |
 
 Verify your client:
 
@@ -51,7 +51,7 @@ Blizzard loads flavor-specific TOC files when present:
 | `MyAddon.toc` | Default fallback |
 | `MyAddon_Classic.toc` | Classic flavors (includes Cata Classic) |
 
-For Cata-only addons, a single TOC with `## Interface: 40403` is often enough.
+For Cata-only addons, a single TOC with `## Interface: 40402` is often enough.
 
 ## Common directives
 

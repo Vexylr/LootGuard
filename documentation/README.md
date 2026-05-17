@@ -1,6 +1,6 @@
-# Cataclysm Classic 4.4.3 — Addon API Documentation
+# Cataclysm Classic 4.4.2 — Addon API Documentation
 
-Offline reference for WoW **Cataclysm Classic** addon development. Target patch **4.4.3**, interface **`40403`**.
+Offline reference for WoW **Cataclysm Classic** addon development. Target patch **4.4.2**, interface **`40402`**.
 
 ## Quick start
 
@@ -86,7 +86,7 @@ $env:WOW_CATA_PATH = "D:\Games\World of Warcraft\_classic_"
 
 | Check | How |
 |-------|-----|
-| Interface for TOC | `VERSION.md` → `## Interface: 40403` in `YourAddon.toc` |
+| Interface for TOC | `VERSION.md` → `## Interface: 40402` in `YourAddon.toc` |
 | API exists on Cata | Grep `api-reference/GlobalAPI.lua` |
 | Event name | Grep `api-reference/Events.lua` |
 | Blizzard UI example | Search `ui-source/Interface/FrameXML/` |

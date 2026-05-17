@@ -5,16 +5,16 @@
 | Field | Value |
 |-------|-------|
 | Game | Cataclysm Classic |
-| Patch | **4.4.3** |
-| TOC interface | **40403** |
+| Patch | **4.4.2** |
+| TOC interface | **40402** |
 | TOC file suffix | `_Classic.toc` (if using flavor-specific TOC) |
 
 ## Bootstrapped from public mirrors
 
 | Source | Tag / branch | Notes |
 |--------|--------------|-------|
-| [Ketho/BlizzardInterfaceResources](https://github.com/Ketho/BlizzardInterfaceResources) | `4.4.2` (fallback until `4.4.3` tag exists) | `api-reference/` |
-| [Gethe/wow-ui-source](https://github.com/Gethe/wow-ui-source) | `4.4.2` (fallback until `4.4.3` tag exists) | `ui-source/` |
+| [Ketho/BlizzardInterfaceResources](https://github.com/Ketho/BlizzardInterfaceResources) | `4.4.2` | `api-reference/` |
+| [Gethe/wow-ui-source](https://github.com/Gethe/wow-ui-source) | `4.4.2` | `ui-source/` |
 
 Public mirrors may lag your installed client. Prefer **live-dump** when available.
 

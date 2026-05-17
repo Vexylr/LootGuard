@@ -1,6 +1,6 @@
 # LootGuard
 
-Cataclysm Classic (4.4.3 / interface `40403`) addon for loot roll tracking, anti-ninja heuristics, player reputation (1–10), and in-game sync.
+Cataclysm Classic (4.4.2 / interface `40402`) addon for loot roll tracking, anti-ninja heuristics, player reputation (1–10), and in-game sync.
 
 ## Install
 
@@ -10,7 +10,7 @@ Copy the `LootGuard` folder to:
 World of Warcraft\_classic_\Interface\AddOns\LootGuard\
 ```
 
-Enable **LootGuard** on the character AddOns screen. Set `## Interface: 40403` if your client differs.
+Enable **LootGuard** on the character AddOns screen. Set `## Interface: 40402` if your client differs.
 
 ## Commands
 
@@ -22,7 +22,7 @@ Enable **LootGuard** on the character AddOns screen. Set `## Interface: 40403` i
 | `/lg config` | Open advanced settings (AceConfig) |
 | `/lg sync` | Push reputation data to guild channel |
 
-Enable **Load out of date AddOns** if your client interface differs from `40403`.
+Enable **Load out of date AddOns** if your client interface differs from `40402`.
 
 ## Features
 

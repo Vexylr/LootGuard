@@ -1,6 +1,6 @@
-# LootGuard — Cataclysm Classic 4.4.3
+# LootGuard — Cataclysm Classic 4.4.2
 
-Anti-ninja loot tracking for **World of Warcraft: Cataclysm Classic** (interface **40403**).
+Anti-ninja loot tracking for **World of Warcraft: Cataclysm Classic** (interface **40402**).
 
 | Path | Purpose |
 |------|---------|
@@ -21,7 +21,7 @@ See [addon/LootGuard/README.md](addon/LootGuard/README.md) for features, trouble
 
 ## Documentation
 
-Target patch **4.4.3**. Refresh API dumps locally:
+Target patch **4.4.2**. Refresh API dumps locally:
 
 ```powershell
 .\documentation\scripts\sync-documentation.ps1

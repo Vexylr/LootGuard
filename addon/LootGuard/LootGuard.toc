@@ -1,4 +1,4 @@
-## Interface: 40403
+## Interface: 40402
 ## Title: LootGuard
 ## Notes: Anti-ninja loot tracking, reputation scores, and guild sync.
 ## Author: Custom
