@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime.version": "Lua 5.1",
+  "runtime.builtin": {
+    "basic": "disable",
+    "debug": "disable",
+    "io": "disable",
+    "os": "disable",
+    "package": "disable",
+    "coroutine": "disable"
+  },
+  "workspace.library": [
+    "api-reference",
+    "api-reference/live-dump",
+    "ui-source"
+  ],
+  "workspace.checkThirdParty": false
+}

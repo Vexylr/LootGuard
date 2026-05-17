@@ -1,0 +1,30 @@
+## Interface: 40403
+## Title: LootGuard
+## Notes: Anti-ninja loot tracking, reputation scores, and guild sync.
+## Author: Custom
+## Version: 1.0.0
+## SavedVariables: LootGuardDB
+## X-Category: Loot
+
+Libs\embeds.xml
+
+Core\Constants.lua
+Data\ClassRules.lua
+Data\Storage.lua
+Loot\ItemInspector.lua
+Loot\RollTracker.lua
+Scoring\Incidents.lua
+Scoring\Engine.lua
+Sync\Merge.lua
+Sync\Comm.lua
+Sync\GuildSync.lua
+Sync\MeetSync.lua
+UI\Theme.lua
+UI\MainFrame.lua
+UI\SessionTab.lua
+UI\NinjaListTab.lua
+UI\SettingsTab.lua
+UI\Minimap.lua
+Tooltip\Reputation.lua
+UI\MainFrame.xml
+Core\Init.lua

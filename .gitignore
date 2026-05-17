@@ -1,0 +1,15 @@
+# Sync temp
+documentation/scripts/.cache/
+*.zip
+
+# Cloned via documentation/scripts/sync-documentation.ps1 (nested .git)
+documentation/ui-source/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
