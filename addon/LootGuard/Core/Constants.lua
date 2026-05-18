@@ -1,7 +1,5 @@
-local addonName = ...
 LootGuard = LootGuard or {}
 local LG = LootGuard
-LG.ADDON_NAME = addonName or "LootGuard"
 LG.ADDON_PREFIX = "LGv1"
 LG.ADDON_VERSION = 1
 

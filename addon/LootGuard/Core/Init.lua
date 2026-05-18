@@ -1,12 +1,21 @@
 local addonName = ...
 local LG = LootGuard
 
-local Addon = LibStub("AceAddon-3.0"):NewAddon(addonName, "AceEvent-3.0", "AceConsole-3.0", "AceTimer-3.0", "AceComm-3.0")
-LG.addon = Addon
+local Addon
+local ok, err = pcall(function()
+	if not LibStub then
+		error("LibStub not found — Libs\\embeds.xml did not load.")
+	end
+	Addon = LibStub("AceAddon-3.0"):NewAddon(addonName, "AceEvent-3.0", "AceConsole-3.0", "AceTimer-3.0", "AceComm-3.0")
+end)
 
-local function SlashHandler(msg)
-	Addon:OnChat(msg)
+if not ok then
+	LG.loadError = tostring(err)
+	print("|cffff0000LootGuard failed to start:|r " .. LG.loadError)
+	return
 end
+
+LG.addon = Addon
 
 function Addon:OnInitialize()
 	self.db = LibStub("AceDB-3.0"):New("LootGuardDB", LG.Storage:GetDefaults(), true)
@@ -29,12 +38,9 @@ function Addon:OnInitialize()
 
 	self:RegisterChatCommand("lootguard", "OnChat")
 	self:RegisterChatCommand("lg", "OnChat")
-
-	-- Fallback slash registration if AceConsole fails on some clients
-	_G.SLASH_LOOTGUARD1 = "/lootguard"
-	_G.SLASH_LOOTGUARD2 = "/lg"
-	_G.SlashCmdList = _G.SlashCmdList or {}
-	_G.SlashCmdList["LOOTGUARD"] = SlashHandler
+	_G.SlashCmdList["LOOTGUARD"] = function(msg)
+		LG.SlashHandler(msg)
+	end
 end
 
 function Addon:OnEnable()
@@ -164,7 +170,7 @@ function Addon:OnChat(msg)
 			print("|cffc9a227LootGuard:|r Guild sync requested.")
 		end
 	elseif msg == "help" or msg == "?" then
-		print("|cffc9a227LootGuard|r v1.0.0 — /lg, /lg session, /lg ninja, /lg sync, /lg config, /lg debug")
+		print("|cffc9a227LootGuard|r v1.0.1 — /lg, /lg session, /lg ninja, /lg sync, /lg config, /lg debug")
 	else
 		if not LG.MainFrame.frame then
 			print("|cffc9a227LootGuard:|r UI frame missing. Try /reload. /lg debug for details.")

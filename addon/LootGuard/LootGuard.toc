@@ -2,13 +2,14 @@
 ## Title: LootGuard
 ## Notes: Anti-ninja loot tracking, reputation scores, and guild sync.
 ## Author: Custom
-## Version: 1.0.0
+## Version: 1.0.1
 ## SavedVariables: LootGuardDB
 ## X-Category: Loot
 
+Core\Constants.lua
+Core\Bootstrap.lua
 Libs\embeds.xml
 
-Core\Constants.lua
 Core\Diagnostics.lua
 Data\ClassRules.lua
 Data\Storage.lua
