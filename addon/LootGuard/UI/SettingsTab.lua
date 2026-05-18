@@ -99,6 +99,11 @@ function SettingsTab:RegisterAceConfig()
 	local function global()
 		return LG.Storage.db and LG.Storage.db.global
 	end
+	local function afterThresholdChange()
+		LG.Engine:RefreshAllFlags()
+		if LG.NinjaListTab then LG.NinjaListTab:Refresh() end
+		if LG.SettingsTab then LG.SettingsTab:LoadValues() end
+	end
 	local options = {
 		type = "group",
 		name = "LootGuard",
@@ -109,7 +114,7 @@ function SettingsTab:RegisterAceConfig()
 				set = function(_, v)
 					local g = global(); if not g then return end
 					g.scale = v
-					LG.Engine:RefreshAllFlags()
+					afterThresholdChange()
 				end,
 			},
 			watchRep = {
@@ -118,7 +123,7 @@ function SettingsTab:RegisterAceConfig()
 				set = function(_, v)
 					local g = global(); if not g then return end
 					g.watchRep = v
-					LG.Engine:RefreshAllFlags()
+					afterThresholdChange()
 				end,
 			},
 			suspectedRep = {
@@ -127,7 +132,7 @@ function SettingsTab:RegisterAceConfig()
 				set = function(_, v)
 					local g = global(); if not g then return end
 					g.suspectedRep = v
-					LG.Engine:RefreshAllFlags()
+					afterThresholdChange()
 				end,
 			},
 			ninjaRep = {
@@ -136,7 +141,7 @@ function SettingsTab:RegisterAceConfig()
 				set = function(_, v)
 					local g = global(); if not g then return end
 					g.ninjaRep = v
-					LG.Engine:RefreshAllFlags()
+					afterThresholdChange()
 				end,
 			},
 			ninjaListMinFlag = {
@@ -154,7 +159,7 @@ function SettingsTab:RegisterAceConfig()
 				set = function(_, v)
 					local g = global(); if not g then return end
 					g.ninjaListMinFlag = v
-					if LG.NinjaListTab then LG.NinjaListTab:Refresh() end
+					afterThresholdChange()
 				end,
 			},
 			watchViolations = {
@@ -163,7 +168,7 @@ function SettingsTab:RegisterAceConfig()
 				set = function(_, v)
 					local g = global(); if not g then return end
 					g.watchViolations = v
-					LG.Engine:RefreshAllFlags()
+					afterThresholdChange()
 				end,
 			},
 			suspectedViolations24h = {
@@ -172,7 +177,7 @@ function SettingsTab:RegisterAceConfig()
 				set = function(_, v)
 					local g = global(); if not g then return end
 					g.suspectedViolations24h = v
-					LG.Engine:RefreshAllFlags()
+					afterThresholdChange()
 				end,
 			},
 			ninjaViolationsInstance = {
@@ -181,7 +186,7 @@ function SettingsTab:RegisterAceConfig()
 				set = function(_, v)
 					local g = global(); if not g then return end
 					g.ninjaViolationsInstance = v
-					LG.Engine:RefreshAllFlags()
+					afterThresholdChange()
 				end,
 			},
 		},
