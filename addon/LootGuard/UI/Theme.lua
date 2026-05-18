@@ -20,29 +20,47 @@ Theme.colors = {
 }
 
 function Theme:ApplyBackdrop(frame, inset)
+	if not frame or not frame.SetBackdrop then return end
 	inset = inset or 12
-	frame:SetBackdrop({
-		bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background-Dark",
-		edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
-		tile = true,
-		tileSize = 32,
-		edgeSize = 32,
-		insets = { left = inset, right = inset, top = inset, bottom = inset },
-	})
+	local ok = pcall(function()
+		frame:SetBackdrop({
+			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background-Dark",
+			edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+			tile = true,
+			tileSize = 32,
+			edgeSize = 32,
+			insets = { left = inset, right = inset, top = inset, bottom = inset },
+		})
+	end)
+	if not ok and not frame.lgBg then
+		local bg = frame:CreateTexture(nil, "BACKGROUND")
+		bg:SetAllPoints()
+		bg:SetColorTexture(0.07, 0.08, 0.09, 0.95)
+		frame.lgBg = bg
+	end
 end
 
 function Theme:ApplyPanelBackdrop(frame)
+	if not frame or not frame.SetBackdrop then return end
 	local c = self.colors.panel
-	frame:SetBackdrop({
-		bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
-		edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
-		tile = true,
-		tileSize = 16,
-		edgeSize = 12,
-		insets = { left = 3, right = 3, top = 3, bottom = 3 },
-	})
-	frame:SetBackdropColor(c[1], c[2], c[3], c[4])
-	frame:SetBackdropBorderColor(0.2, 0.22, 0.26, 0.9)
+	local ok = pcall(function()
+		frame:SetBackdrop({
+			bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
+			edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+			tile = true,
+			tileSize = 16,
+			edgeSize = 12,
+			insets = { left = 3, right = 3, top = 3, bottom = 3 },
+		})
+		frame:SetBackdropColor(c[1], c[2], c[3], c[4])
+		frame:SetBackdropBorderColor(0.2, 0.22, 0.26, 0.9)
+	end)
+	if not ok and not frame.lgBg then
+		local bg = frame:CreateTexture(nil, "BACKGROUND")
+		bg:SetAllPoints()
+		bg:SetColorTexture(c[1], c[2], c[3], c[4] or 0.95)
+		frame.lgBg = bg
+	end
 end
 
 function Theme:ApplyHeader(fontString)

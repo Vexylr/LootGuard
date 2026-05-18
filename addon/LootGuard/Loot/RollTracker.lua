@@ -90,7 +90,7 @@ function RollTracker:RefreshItem(itemIdx, forceProcess)
 		C_Timer.After(3, function()
 			if self.processedRolls[rollID] then return end
 			local idx = self:FindItemIndex(rollID) or itemIdx
-			local _, link, _, done = C_LootHistory.GetItem(idx)
+			local _, link, _, _, done = C_LootHistory.GetItem(idx)
 			if done and link then
 				self:RefreshItem(idx, true)
 			else

@@ -9,10 +9,12 @@
 Libs\embeds.xml
 
 Core\Constants.lua
+Core\Diagnostics.lua
 Data\ClassRules.lua
 Data\Storage.lua
 Loot\ItemInspector.lua
 Loot\RollTracker.lua
+Loot\RollFallback.lua
 Scoring\Incidents.lua
 Scoring\Engine.lua
 Sync\Merge.lua
